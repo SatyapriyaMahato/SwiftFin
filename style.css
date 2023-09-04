@@ -211,8 +211,7 @@ img {
 #menu-toggle:checked+.menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
-  background-color: #fff;
-
+  background: black;
 
 }
 
@@ -223,7 +222,7 @@ img {
 #menu-toggle:checked+.menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
-  background-color: #fff;
+  background: black;
 
 }
 
@@ -737,40 +736,61 @@ h4 {
 
 @media only screen and (max-width: 768px) {
 
-  .nav,
-  .nav__links {
+  .nav {
     flex-direction: column;
     padding: 2em 0;
     gap: 2em;
-  }
-
-  .nav {
     position: absolute;
     background-color: #fff;
-    width: 100vw;
-    height: 40vh;
     z-index: 2;
+
   }
 
-  /* menu section start*/
+  .nav__logo {
+    align-self: flex-start;
+    margin-left: 3rem;
+  }
+
+  /************ menu section start ***********/
+
   .menu-button-container {
     display: flex;
   }
 
-  #menu-toggle:checked~.menu {
+  #menu-toggle:checked~.nav__links {
     right: 0 !important;
   }
 
-  #menu-toggle {
-    top: 3em;
+  .menu-button {
+    top: 4em;
     right: 3em;
     z-index: 5;
   }
 
-  .menu-button {
-    top: 3em;
-    right: 3em;
-    z-index: 5;
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 8em;
+    background-color: #fff;
+    padding: 4em;
+    z-index: 2;
   }
+
+  .nav__links li {
+    font-weight: 700;
+    margin: .5em 0;
+  }
+
+  #menu-toggle:checked~.nav__links {
+    display: flex;
+  }
+
+  /************ menu section end ***********/
+
+
 
 }
