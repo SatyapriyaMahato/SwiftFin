@@ -859,6 +859,13 @@ h4 {
 
   /************ operations section end ***********/
 
+  /************ slider section start ***********/
+  .slider,
+  .slide {
+
+    height: 80rem;
+
+  }
 
   .footer {
     padding: 2rem 0;
