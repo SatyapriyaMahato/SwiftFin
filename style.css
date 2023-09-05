@@ -37,7 +37,6 @@ body {
 .section {
   padding: 15rem 3rem;
   border-top: 1px solid #ddd;
-
   transition: transform 1s, opacity 1s;
 }
 
@@ -172,13 +171,11 @@ img {
 
 .menu-button-container {
   display: none;
-  height: 100%;
-  width: 30px;
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 6em;
+  padding-right: 5em;
 }
 
 #menu-toggle {
@@ -237,7 +234,7 @@ img {
 
 .header__title {
   flex: 1;
-
+  /* margin-top: rem; */
   max-width: 115rem;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -286,10 +283,15 @@ h4 {
 
 /* FEATURES */
 .features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+
   margin: 0 12rem;
+}
+
+.feature--1,
+.feature--2,
+.feature--3 {
+  display: flex;
+  gap: 4rem;
 }
 
 .features__img {
@@ -736,14 +738,30 @@ h4 {
 
 @media only screen and (max-width: 768px) {
 
+  h1 {
+    font-size: 5rem;
+    line-height: 1.35;
+  }
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
   .nav {
     flex-direction: column;
     padding: 2em 0;
-    gap: 2em;
     position: absolute;
     background-color: #fff;
     z-index: 2;
-
   }
 
   .nav__logo {
@@ -755,16 +773,13 @@ h4 {
 
   .menu-button-container {
     display: flex;
+    position: absolute;
+    right: 0;
+    top: 4rem;
   }
 
   #menu-toggle:checked~.nav__links {
     right: 0 !important;
-  }
-
-  .menu-button {
-    top: 4em;
-    right: 3em;
-    z-index: 5;
   }
 
   .nav__links {
@@ -791,6 +806,70 @@ h4 {
 
   /************ menu section end ***********/
 
+  .header__title {
+    grid-template-columns: none;
+  }
+
+  .header__img {
+    display: none;
+  }
+
+  /************ feature section start ***********/
+  .features {
+    margin: 0 3rem;
+  }
+
+  .feature--1,
+  .feature--3 {
+    flex-direction: column;
+  }
+
+  .feature--2 {
+    flex-direction: column-reverse;
+  }
+
+  /************ feature section end ***********/
+
+
+  /************ operation section start ***********/
+
+  .operations__tab-container {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .operations {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+
+  .operations__content--active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  /************ operations section end ***********/
+
+
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .footer__nav {
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+
+  }
 
 
 }
