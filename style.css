@@ -870,24 +870,35 @@ h4 {
     padding: 2rem;
   }
 
-  /************ operations section end ***********/
-
-  /************ slider section start ***********/
-  .slider,
-  .slide {
-    height: 80rem;
+  .operations__tab {
+    transform: translateY(0%);
   }
 
-  .footer {
-    padding: 2rem 0;
+  .operations__tab--active {
+    transform: translateX(-2%);
+    box-shadow: #42280084 4px 4px 4px 0;
+    ;
   }
+}
 
-  .footer__nav {
-    align-items: center;
-    gap: 1rem;
-    flex-direction: column;
+/************ operations section end ***********/
 
-  }
+/************ slider section start ***********/
+.slider,
+.slide {
+  height: 80rem;
+}
+
+.footer {
+  padding: 2rem 0;
+}
+
+.footer__nav {
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+
+}
 
 
 }
